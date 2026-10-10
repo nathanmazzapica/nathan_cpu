@@ -31,6 +31,8 @@ module decoder2to4_tb;
     );
 
     initial begin
+        $dumpfile("decoder2to4.vcd");
+        $dumpvars(0, decoder2to4_tb);
         en = 1;
         
         // TEST ENABLED

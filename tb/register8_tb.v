@@ -35,6 +35,8 @@ module register8_tb;
     always #5 clk = ~clk;
 
     initial begin
+        $dumpfile("register8.vcd");
+        $dumpvars(0, register8_tb);
         // Test 1: Write a value
         en = 1;
         d = 8'b10110101;

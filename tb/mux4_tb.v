@@ -34,6 +34,9 @@ module mux4_tb;
     );
 
     initial begin
+        $dumpfile("mux4.vcd");
+        $dumpvars(0, mux4_tb);
+
         a = 8'b00000001;
         b = 8'b00000010;
         c = 8'b00000011;
