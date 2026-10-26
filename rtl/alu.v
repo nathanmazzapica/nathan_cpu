@@ -23,6 +23,7 @@ module alu(
     input wire [7:0] a,
     input wire [7:0] b,
     output wire [7:0] result,
+    output wire zf,
     output wire cout
 );
 
@@ -105,5 +106,7 @@ module alu(
     assign xor_result   = a ^ b;
     assign not_result   = ~a;
     assign pass_result  = a;
+
+    assign zf = ~|result;
 
 endmodule
