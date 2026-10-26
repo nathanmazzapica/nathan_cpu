@@ -27,6 +27,7 @@ module register8_tb;
     wire [7:0] q;
     register8 dut (
         .clk(clk),
+        .reset(1'b0), // Reset unused: keep it inactive.
         .en(en),
         .d(d),
         .q(q)

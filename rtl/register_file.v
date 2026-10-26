@@ -42,6 +42,7 @@ module register_file(
 
     register8 reg0 (
         .clk(clk),
+        .reset(1'b0), // Reset unused: keep it inactive.
         .en(write_select[0]),
         .d(write_data),
         .q(q0)
@@ -49,6 +50,7 @@ module register_file(
 
     register8 reg1(
         .clk(clk),
+        .reset(1'b0), // Reset unused: keep it inactive.
         .en(write_select[1]),
         .d(write_data),
         .q(q1)
@@ -56,12 +58,14 @@ module register_file(
 
     register8 reg2(
         .clk(clk),
+        .reset(1'b0), // Reset unused: keep it inactive.
         .en(write_select[2]),
         .d(write_data),
         .q(q2)
     );
     register8 reg3(
         .clk(clk),
+        .reset(1'b0), // Reset unused: keep it inactive.
         .en(write_select[3]),
         .d(write_data),
         .q(q3)
